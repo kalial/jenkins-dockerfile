@@ -11,4 +11,4 @@ VOLUME ["/jenkins"]
 
 ENTRYPOINT ["java", "-jar", "/opt/jenkins.war"]
 
-EXPOSE 80 443
+EXPOSE 8080
