@@ -5,6 +5,10 @@ ADD http://mirrors.jenkins-ci.org/war/1.595/jenkins.war /opt/jenkins.war
 
 RUN chmod 644 /opt/jenkins.war
 
+# Persistent jenkins data should be volume
+ENV JENKINS_HOME /jenkins
+VOLUME ["/jenkins"]
+
 ENTRYPOINT ["java", "-jar", "/opt/jenkins.war"]
 
 EXPOSE 80 443
