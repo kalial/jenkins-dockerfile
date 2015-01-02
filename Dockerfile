@@ -9,6 +9,6 @@ RUN chmod 644 /opt/jenkins.war
 ENV JENKINS_HOME /jenkins
 VOLUME ["/jenkins"]
 
-ENTRYPOINT ["java", "-jar", "/opt/jenkins.war"]
+CMD ["java", "-jar", "/opt/jenkins.war"]
 
 EXPOSE 8080
