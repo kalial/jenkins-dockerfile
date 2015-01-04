@@ -2,6 +2,8 @@
 
 ![Jenkins](https://raw.githubusercontent.com/stephenliang/jenkins-dockerfile/master/logo.png)
 
+> [https://wiki.jenkins-ci.org/display/JENKINS/Logo](Credit: Jenkins Wiki)
+
 Jenkins provides continuous integration services for software development. It is a server-based system running in a servlet container such as Apache Tomcat. It supports SCM tools including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, Clearcase and RTC, and can execute Apache Ant and Apache Maven based projects as well as arbitrary shell scripts and Windows batch commands. 
 
 > [https://en.wikipedia.org/wiki/Jenkins_%28software%29](https://en.wikipedia.org/wiki/Jenkins_%28software%29)
