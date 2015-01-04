@@ -34,6 +34,16 @@ One really neat feature that Docker has is the ability to run Docker within Dock
 
 The `priviliged` flag enables the docker container to have some elevated permissions available to the host. Be sure you understand the implications of this by visiting the [https://docs.docker.com/reference/run/#runtime-privilege-linux-capabilities-and-lxc-configuration](docker run) documentation page.
 
+In addition, this image doesn't include Docker within it. A sample Dockerfile to include Docker is as follows:
+
+	FROM simplyintricate/jenkins
+
+	# Install Docker
+	RUN apt-get update && apt-get -y install curl
+	RUN curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+
+	CMD service docker start && java -jar /opt/jenkins.war
+
 # Security
 
 This docker image is re-built weekly to pull in the latest upstream code for security purposes. If for some reason you find that the image is too old (check the build details), please do not use this image.
